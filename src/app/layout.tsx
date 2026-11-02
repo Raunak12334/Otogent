@@ -32,20 +32,20 @@ const getBaseUrl = () => {
 
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseUrl()),
-  title: "Otogent - Automations & Agent",
-  description: "AI Automation & Agents - Business Process Automations",
+  title: "Otogent | Agentic trading",
+  description: "Automation & Agents for traders",
   icons: {
     icon: [
-      { url: "/fevicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/icon.svg", type: "image/svg+xml" },
     ],
-    shortcut: "/fevicon.svg",
-    apple: "/fevicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   openGraph: {
-    title: "Otogent - Automations & Agent",
-    description: "AI Automation & Agents - Business Process Automations",
+    title: "Otogent | Agentic trading",
+    description: "Automation & Agents for traders",
     url: "https://otogent.com",
     type: "website",
     siteName: "Otogent",
