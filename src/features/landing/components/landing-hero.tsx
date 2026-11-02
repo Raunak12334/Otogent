@@ -88,7 +88,7 @@ function HeroButton() {
       />
 
       {/* ── Label ── */}
-      <span className="relative z-10 text-white tracking-tight">Start building</span>
+      <span className="relative z-10 text-white tracking-tight">Start now</span>
 
       {/* ── Signal dot / Arrow badge (aligned as in reference image) ── */}
       <span
@@ -139,16 +139,16 @@ export function LandingHero() {
               <span className="text-ploy-accent-primary font-medium" aria-hidden="true">
                 /
               </span>
-              Otogent - Automation &amp; agent infrastructure
+              Otogent - Agentic trading
             </div>
 
             <h1 className="font-otogent-display text-ploy-text-primary leading-[0.88] mb-7 text-[clamp(3.2rem,8vw,4.5rem)] lg:text-[clamp(3.8rem,4.4vw,5rem)]">
               <span className="block lg:whitespace-nowrap">Automation &amp; Agents</span>
-              <span className="block font-medium">for Quant trading</span>
+              <span className="block font-medium">for Agentic trading</span>
             </h1>
 
             <p className="text-ploy-text-secondary leading-relaxed text-base md:text-lg max-w-lg mb-8">
-              Design the workflow, assign specialized agents, and track every handoff from product prompt to deployment.
+              Agentic trading uses autonomous AI agents to research, monitor markets, analyze data, and execute trades on your behalf
             </p>
 
             <HeroButton />
