@@ -56,14 +56,14 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         type: "image/png",
-        alt: "Otogent AI - Automations & Agent",
+        alt: "Otogent | Agentic trading",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Otogent AI - Automations & Agent",
-    description: "AI Automation & Agents - Business Process Automations",
+    title: "Otogent | Agentic trading",
+    description: "Automation & Agents for trading",
     images: ["/og-image.png?v=3"],
   },
 };
