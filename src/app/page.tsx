@@ -11,16 +11,16 @@ import { LandingFooter } from "@/features/landing/components/landing-footer";
 import { LandingSmoothScroll } from "@/features/landing/components/landing-smooth-scroll";
 
 export const metadata: Metadata = {
-  title: "Otogent AI | Automation and agent infrastructure",
+  title: "Otogent | Agentic trading",
   description:
-    "Build repeatable automations, coordinate specialized AI agents, and keep execution visible with Otogent AI.",
+    "Automation & Agents for trading",
   openGraph: {
-    title: "Otogent AI | Automation and agent infrastructure",
+    title: "Otogent | Agentic trading",
     description:
-      "Design agent-run workflows and operate them from request to result with Otogent AI.",
+      "Automation & Agents for trading",
     url: "https://www.otogent.com",
     type: "website",
-    siteName: "Otogent AI",
+    siteName: "Otogent",
     images: [
       {
         url: "/og-image.png?v=3",
@@ -28,15 +28,15 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         type: "image/png",
-        alt: "Otogent AI - Automation and agent infrastructure",
+        alt: "Otogent | Agentic trading",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Otogent AI | Automation and agent infrastructure",
+    title: "Otogent | Agentic trading",
     description:
-      "Design agent-run workflows and operate them from request to result with Otogent AI.",
+      "Automation & Agents for trading",
     images: ["/og-image.png?v=3"],
   },
 };
