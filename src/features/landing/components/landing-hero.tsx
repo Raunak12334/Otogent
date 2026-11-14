@@ -134,17 +134,16 @@ export function LandingHero() {
     >
       <div className="relative min-h-screen grid grid-rows-[48vh_auto] lg:grid-cols-[1.12fr_0.88fr] lg:grid-rows-1">
         <div className="order-2 relative z-10 flex items-end px-6 pb-12 pt-8 md:px-20 md:pb-16 lg:order-1 lg:min-h-screen lg:px-20 lg:pb-20 xl:px-28">
-          <div className="max-w-[42rem]">
+          <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-7 font-mono text-[0.6875rem] tracking-[0.14em] uppercase text-ploy-text-secondary">
               <span className="text-ploy-accent-primary font-medium" aria-hidden="true">
                 /
               </span>
-              Otogent - Agentic trading
+              Otogent - Automate your trading
             </div>
 
             <h1 className="font-otogent-display text-ploy-text-primary leading-[0.88] mb-7 text-[clamp(3.2rem,8vw,4.5rem)] lg:text-[clamp(3.8rem,4.4vw,5rem)]">
-              <span className="block lg:whitespace-nowrap">Automation &amp; Agents</span>
-              <span className="block font-medium">for Agentic trading</span>
+              <span className="block font-medium">Agentic trading</span>
             </h1>
 
             <p className="text-ploy-text-secondary leading-relaxed text-base md:text-lg max-w-lg mb-8">

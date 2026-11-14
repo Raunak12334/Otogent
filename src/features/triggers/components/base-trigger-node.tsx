@@ -3,7 +3,6 @@
 import { memo } from "react";
 import { type NodeProps, Position, useReactFlow } from "@xyflow/react";
 import { LucideIcon } from "lucide-react";
-import Image from "next/image";
 import { WorkflowNode } from "@/components/workflow-node";
 import { BaseNode, BaseNodeContent } from "@/components/react-flow/base-node";
 import { BaseHandle } from "@/components/react-flow/base-handle";
@@ -18,6 +17,7 @@ interface BaseTriggerNodeProps extends NodeProps {
     onSettings?: () => void;
     onDoubleClick?: () => void;
 }
+
 
 export const BaseTriggerNode = memo(({
     id,

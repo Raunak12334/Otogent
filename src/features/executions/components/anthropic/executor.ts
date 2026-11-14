@@ -5,6 +5,7 @@ import { createAnthropic } from "@ai-sdk/anthropic";
 import { generateText } from "ai";
 import Handlebars from "handlebars";
 import { NonRetriableError } from "inngest";
+import { type } from "os";
 
 export type AnthropicNodeData = {
     variableName?: string;
@@ -13,6 +14,7 @@ export type AnthropicNodeData = {
     systemPrompt?: string;
     userPrompt?: string;
 };
+
 
 export const anthropicExecutor: NodeExecutor<AnthropicNodeData> = async ({
     data,
