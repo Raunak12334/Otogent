@@ -36,23 +36,22 @@ export const metadata: Metadata = {
   description: "Automation & Agents for traders",
   icons: {
     icon: [
+      { url: "/icon.png", sizes: "180x180", type: "image/png" },
       { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/icon.svg", type: "image/svg+xml" },
     ],
     shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Otogent | Agentic trading",
-    description: "Automation & Agents for traders",
+    description: "Automate your trading",
     url: "https://otogent.com",
     type: "website",
     siteName: "Otogent",
     images: [
       {
-        url: "/og-image.png?v=3",
-        secureUrl: "/og-image.png?v=3",
+        url: "/og-image.png",
+        secureUrl: "/og-image.png",
         width: 1200,
         height: 630,
         type: "image/png",
@@ -64,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Otogent | Agentic trading",
     description: "Automation & Agents for trading",
-    images: ["/og-image.png?v=3"],
+    images: ["/og-image.png"],
   },
 };
 
