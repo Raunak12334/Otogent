@@ -12,19 +12,17 @@ import { LandingSmoothScroll } from "@/features/landing/components/landing-smoot
 
 export const metadata: Metadata = {
   title: "Otogent | Agentic trading",
-  description:
-    "Automation & Agents for trading",
+  description: "Automate your trading",
   openGraph: {
     title: "Otogent | Agentic trading",
-    description:
-      "Automation & Agents for trading",
+    description: "Automate your trading",
     url: "https://www.otogent.com",
     type: "website",
     siteName: "Otogent",
     images: [
       {
-        url: "/og-image.png?v=3",
-        secureUrl: "/og-image.png?v=3",
+        url: "/og-image.png",
+        secureUrl: "/og-image.png",
         width: 1200,
         height: 630,
         type: "image/png",
@@ -35,9 +33,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Otogent | Agentic trading",
-    description:
-      "Automation & Agents for trading",
-    images: ["/og-image.png?v=3"],
+    description: "Automate your trading",
+    images: ["/og-image.png"],
   },
 };
 
