@@ -33,7 +33,7 @@ const getBaseUrl = () => {
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseUrl()),
   title: "Otogent | Agentic trading",
-  description: "Automation & Agents for traders",
+  description: "Automate your trading",
   icons: {
     icon: [
       { url: "/icon.png", sizes: "180x180", type: "image/png" },
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Otogent | Agentic trading",
-    description: "Automation & Agents for trading",
+    description: "Automate your trading",
     images: ["/og-image.png"],
   },
 };
