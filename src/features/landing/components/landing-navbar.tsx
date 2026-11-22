@@ -8,18 +8,15 @@ export function LandingNavbar() {
         <a
           aria-label="Otogent AI home"
           href="#hero"
-          className="[color:inherit] flex shrink-0 items-center gap-2 pl-1 pr-2 py-0.5 rounded-full"
+          className="text inherit flex shrink-0 items-center gap-1 pl-2 pr-2 py-1 rounded-full"
         >
           <img
             alt="Otogent Logo"
-            width="32"
-            height="32"
+            width="29"
+            height="29"
             src="/logo.svg"
-            className="w-7 h-7 md:w-8 md:h-8 object-contain rounded-md overflow-clip"
+            className="w-5 h-5 md:w-6 md:h-6 object-contain rounded-md overflow-clip"
           />
-          <span className="font-sans hidden text-[1.0625rem] font-medium leading-none tracking-[-0.045em] text-ploy-text-primary sm:block">
-            Otogent
-          </span>
         </a>
 
         <div className="bg-ploy-border-primary/70 w-px h-3.5 shrink-0 rounded-full" />

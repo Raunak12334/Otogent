@@ -1,17 +1,11 @@
 import { anthropicExecutor } from "@/features/executions/components/anthropic/executor";
-import { composioActionExecutor } from "@/features/executions/components/composio-action/executor";
 import { geminiExecutor } from "@/features/executions/components/gemini/executor";
 import { httpRequestExecutor } from "@/features/executions/components/http-request/executor";
 import { openaiExecutor } from "@/features/executions/components/openai/executor";
 import { telegramActionExecutor } from "@/features/executions/components/telegram/executor";
-import { whatsappActionExecutor } from "@/features/executions/components/whatsapp/executor";
-import { googleFormTriggerExecutor } from "@/features/triggers/components/google-form-trigger/executor";
 import { manualTriggerExecutor } from "@/features/triggers/components/manual-trigger/executor";
 import { telegramTriggerExecutor } from "@/features/triggers/components/telegram-trigger/executor";
 import { whatsappTriggerExecutor } from "@/features/triggers/components/whatsapp-trigger/executor";
-import { powerpointExecutor } from "@/features/executions/components/powerpoint/executor";
-import { googleSheetsExecutor } from "@/features/executions/components/google-sheets/executor";
-import { googleSlidesExecutor } from "@/features/executions/components/google-slides/executor";
 import { NodeType } from "@/generated/prisma/client";
 import type { NodeExecutor } from "../types";
 
@@ -19,18 +13,12 @@ export const executorRegistry: Partial<Record<NodeType, NodeExecutor>> = {
   [NodeType.MANUAL_TRIGGER]: manualTriggerExecutor,
   [NodeType.INITIAL]: manualTriggerExecutor,
   [NodeType.HTTP_REQUEST]: httpRequestExecutor,
-  [NodeType.COMPOSIO_ACTION]: composioActionExecutor,
   [NodeType.OPENAI]: openaiExecutor,
   [NodeType.ANTHROPIC]: anthropicExecutor,
   [NodeType.GEMINI]: geminiExecutor,
   [NodeType.TELEGRAM_TRIGGER]: telegramTriggerExecutor,
   [NodeType.TELEGRAM_ACTION]: telegramActionExecutor,
   [NodeType.WHATSAPP_TRIGGER]: whatsappTriggerExecutor,
-  [NodeType.WHATSAPP_ACTION]: whatsappActionExecutor,
-  [NodeType.GOOGLE_FORM_TRIGGER]: googleFormTriggerExecutor,
-  [NodeType.POWERPOINT]: powerpointExecutor,
-  [NodeType.GOOGLE_SHEETS]: googleSheetsExecutor,
-  [NodeType.GOOGLE_SLIDES]: googleSlidesExecutor,
 };
 
 export const getExecutor = (type: NodeType): NodeExecutor => {
