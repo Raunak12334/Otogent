@@ -16,7 +16,6 @@
     "@ai-sdk/google": "^4.0.51",
     "@ai-sdk/openai": "^4.0.47",
     "@base-ui/react": "^1.6.0",
-    "@composio/core": "^0.17.0",
     "@hookform/resolvers": "^5.4.0",
     "@inngest/realtime": "^0.4.6",
     "@paralleldrive/cuid2": "^3.3.0",

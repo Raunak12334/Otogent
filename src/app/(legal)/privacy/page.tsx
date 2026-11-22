@@ -309,7 +309,6 @@ export default function PrivacyPolicyPage() {
                 { provider: "Google OAuth", purpose: "Sign-in via Google account", url: "https://policies.google.com/privacy" },
                 { provider: "OpenAI", purpose: "AI model processing (OpenAI nodes in workflows)", url: "https://openai.com/policies/privacy-policy" },
                 { provider: "Anthropic", purpose: "AI model processing (Claude nodes in workflows)", url: "https://www.anthropic.com/privacy" },
-                { provider: "Composio", purpose: "Third-party tool and API integrations for workflow actions", url: "https://composio.dev/privacy-policy" },
                 { provider: "Inngest", purpose: "Background job orchestration and workflow execution", url: "https://www.inngest.com/privacy" },
                 { provider: "Polar", purpose: "Subscription billing and payment processing", url: "https://polar.sh/legal/privacy" },
                 { provider: "GitHub OAuth", purpose: "Sign-in via GitHub account", url: "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" },
