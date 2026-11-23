@@ -34,6 +34,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(getBaseUrl()),
   title: "Otogent | Agentic trading",
   description: "Automate your trading",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     title: "Otogent | Agentic trading",
     description: "Automate your trading",
