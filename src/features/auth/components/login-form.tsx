@@ -118,7 +118,7 @@ export const LoginForm = () => {
                                     <FieldContent>
                                         <Input
                                             type="password"
-                                            placeholder="******"
+                                            placeholder="*********"
                                             {...form.register("password")}
                                         />
                                     </FieldContent>
