@@ -24,6 +24,7 @@ model User {
   accounts      Account[]
   workflows     Workflow[]
   credentials Credential[]
+  agents        Agent[] 
 
   @@unique([email])
   @@map("user")
@@ -183,17 +184,25 @@ model Execution {
 
 }
 
-model Agent {
-  id           String   @id @default(cuid())
-  name         String
-  description  String?
-  systemPrompt String            // strategy, simple language me
-  model        String            // e.g. "claude-sonnet-4-6", "gpt-..."
-  // status       AgentStatus @default(PAUSED)
-  userId       String
-  // user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+
+enum AgentProvider {
+  OPENAI
+  ANTHROPIC
+  GEMINI
 }
 
-// enum AgentStatus { ACTIVE PAUSED }
+model Agent {
+  id           String        @id @default(cuid())
+  name         String
+  role         String        @default("")
+  instructions String        @db.Text
+  provider     AgentProvider
+  model        String
+  avatarSeed   String        @default(cuid())
+  userId       String
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  @@index([userId])
+}
