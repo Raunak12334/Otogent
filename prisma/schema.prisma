@@ -23,8 +23,8 @@ model User {
   sessions      Session[]
   accounts      Account[]
   workflows     Workflow[]
-  credentials   Credential[]
-  agents        Agent[]
+  credentials Credential[]
+  agents        Agent[] 
 
   @@unique([email])
   @@map("user")
@@ -189,18 +189,25 @@ enum AgentProvider {
   GEMINI
 }
 
+
+enum AgentProvider {
+  OPENAI
+  ANTHROPIC
+  GEMINI
+}
+
 model Agent {
-  id String @id @default(cuid())
-  name String
-  role String @default("")
-  instruction String @db.Text
-  provider AgentProvider
-  model String
-  avatarSeed String @default(cuid())
-  userId String
-  user User  @relation(fields: [userId], references: [id], onDelete: Cascade)
-  createdAt DateTime @default(now())
-  updateAt DateTime @updatedAt
+  id           String        @id @default(cuid())
+  name         String
+  role         String        @default("")
+  instructions String        @db.Text
+  provider     AgentProvider
+  model        String
+  avatarSeed   String        @default(cuid())
+  userId       String
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
 
   @@index([userId])
 }
