@@ -181,7 +181,12 @@ model Execution {
   status ExecutionStatus @default(RUNNING)
   error String? @db.Text
   errorStack String? @db.Text
+}
 
+enum AgentProvider {
+  OPENAI
+  ANTHROPIC
+  GEMINI
 }
 
 
