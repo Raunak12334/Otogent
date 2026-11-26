@@ -189,13 +189,6 @@ enum AgentProvider {
   GEMINI
 }
 
-
-enum AgentProvider {
-  OPENAI
-  ANTHROPIC
-  GEMINI
-}
-
 model Agent {
   id           String        @id @default(cuid())
   name         String
