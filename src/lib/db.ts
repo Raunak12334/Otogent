@@ -12,9 +12,10 @@ function createPrismaClient() {
         globalForPrisma.pool ||
         new Pool({
             connectionString: process.env.DATABASE_URL!,
-            max: 10, // max connections in pool
-            idleTimeoutMillis: 60_000, // close idle connections after 60s
-            connectionTimeoutMillis: 10_000, // fail if can't connect in 10s
+            max: 10,
+            idleTimeoutMillis: 30_000,       // close idle connections after 30s
+            connectionTimeoutMillis: 30_000, // Neon cold-start can take 15-25s
+            allowExitOnIdle: true,           // let the process exit cleanly in dev
         });
 
     if (process.env.NODE_ENV !== "production") {
