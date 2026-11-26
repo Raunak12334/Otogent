@@ -1,13 +1,15 @@
 "use client"
 
 import {
+    Bot,
+    Clock,
     CreditCardIcon,
-    FolderIcon,
     HistoryIcon,
     KeyIcon,
     LogOutIcon,
     Route,
     StarIcon,
+    Users,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,8 +34,13 @@ const menuItems = [
         title: "Home",
         items: [
             {
-                title: "Workflows",
-                icon: FolderIcon,
+                title: "Agents",
+                icon: Bot,
+                url: "/agents",
+            },
+            {
+                title: "Automations",
+                icon: Clock,
                 url: "/workflows",
             },
             {

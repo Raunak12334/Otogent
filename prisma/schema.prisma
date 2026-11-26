@@ -112,10 +112,6 @@ enum NodeType {
   TELEGRAM_ACTION
   WHATSAPP_TRIGGER
   WHATSAPP_ACTION
-  BROWSER_OPEN_URL
-  BROWSER_OBSERVE
-  BROWSER_EXTRACT
-  BROWSER_AGENT
 }
 
 model Node {
@@ -186,3 +182,18 @@ model Execution {
   errorStack String? @db.Text
 
 }
+
+model Agent {
+  id           String   @id @default(cuid())
+  name         String
+  description  String?
+  systemPrompt String            // strategy, simple language me
+  model        String            // e.g. "claude-sonnet-4-6", "gpt-..."
+  // status       AgentStatus @default(PAUSED)
+  userId       String
+  // user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// enum AgentStatus { ACTIVE PAUSED }
