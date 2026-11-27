@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Quattrocento } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Provider } from "jotai";
+import { ThemeProvider } from "next-themes";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "@/components/ui/sonner";
 import { TRPCReactProvider } from "@/trpc/client";
@@ -78,14 +79,22 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${quattrocento.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
         <TRPCReactProvider>
-          <NuqsAdapter>
-            <Provider>{children}</Provider>
-          </NuqsAdapter>
-          <Toaster />
-          <SpeedInsights />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <NuqsAdapter>
+              <Provider>{children}</Provider>
+            </NuqsAdapter>
+            <Toaster />
+            <SpeedInsights />
+          </ThemeProvider>
         </TRPCReactProvider>
       </body>
     </html>

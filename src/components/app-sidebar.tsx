@@ -28,6 +28,7 @@ import {
 } from "@/components/ui/sidebar";
 import { authClient } from "@/lib/auth-client";
 import { useHasActiveSubscription } from "@/features/subscriptions/hooks/use-subscription";
+import { SidebarThemeCycleButton, ThemeToggle } from "@/components/theme-toggle";
 
 const menuItems = [
     {
@@ -103,6 +104,12 @@ export const AppSidebar = () => {
             </SidebarContent>
             <SidebarFooter>
                 <SidebarMenu>
+                    <SidebarMenuItem>
+                            <div className="flex h-10 items-center px-4 group-data-[collapsible=icon]:hidden">
+                                <ThemeToggle />
+                            </div>
+                            <SidebarThemeCycleButton />
+                    </SidebarMenuItem>
                     {!hasActiveSubscription && !isLoading && (
                         <SidebarMenuItem>
                             <SidebarMenuButton
