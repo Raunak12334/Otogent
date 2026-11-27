@@ -6,10 +6,12 @@ import { polarClient } from "@/lib/polar";
 
 const getAuthBaseUrl = () => {
     const envUrl = process.env.BETTER_AUTH_URL;
-    if (envUrl && !envUrl.includes("vercel.app")) {
-        return envUrl;
-    }
+    // In production, always use the canonical domain unless explicitly overridden
+    // with a non-localhost value
     if (process.env.NODE_ENV === "production") {
+        if (envUrl && !envUrl.includes("localhost")) {
+            return envUrl;
+        }
         return "https://www.otogent.com";
     }
     return envUrl || "http://localhost:3000";
