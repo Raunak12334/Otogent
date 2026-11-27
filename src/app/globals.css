@@ -307,6 +307,26 @@
   border-color: rgba(209, 213, 219, 0.9);
 }
 
+/* Dark mode overrides for glass/bento utilities */
+.dark .apple-glass {
+  background: rgba(30, 30, 30, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 4px 24px -1px rgba(0, 0, 0, 0.3),
+    0 2px 6px -1px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+.dark .bento-card {
+  background: rgba(20, 20, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.2), 0 2px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.dark .bento-card:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.3), 0 4px 12px -2px rgba(0, 0, 0, 0.15);
+}
+
 /* Apple Direct Response Press State */
 .apple-press {
   transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease, color 150ms ease, box-shadow 150ms ease;
@@ -337,6 +357,12 @@
     background: #f8f8f8 !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+  }
+  .dark .apple-glass, .dark .bento-card {
+    background: #1a1a1a;
+  }
+  .dark .apple-glass, .dark .bento-card {
+    background: #1a1a1a;
   }
 }
 @media (prefers-reduced-motion: reduce) {

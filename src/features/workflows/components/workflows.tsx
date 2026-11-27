@@ -88,7 +88,7 @@ export const WorkflowsSearch = () => {
         <EntitySearch
             value={params.search ?? ""}
             onChange={(value) => setParams({ ...params, search: value })}
-            placeholder="Search Workflows..."
+            placeholder="Search Workflows"
         />
     );
 }
